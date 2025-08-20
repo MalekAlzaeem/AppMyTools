@@ -16,6 +16,66 @@ class HomeScreen extends StatelessWidget {
               Icon(Icons.home,size: 32,)
             ],
           ),
+          body: Center(
+            child: Padding(
+              padding: EdgeInsets.all(15),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  FilledButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.no_encryption_gmailerrorred,size: 32,color: Colors.cyan,),
+                          Text("  اداة تشفير النص",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900),)
+                        ],
+                      )
+                  ),
+                  FilledButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.image_search,size: 32,color: Colors.cyan,),
+                          Text("  اداة تحليل الصور",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900),)
+                        ],
+                      )
+                  ),
+                  FilledButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.library_books,size: 32,color: Colors.cyan,),
+                          Text("  اداة توليد القواميس",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900),)
+                        ],
+                      )
+                  ),
+                  FilledButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.security,size: 32,color: Colors.cyan,),
+                          Text("  اداة توليد كلمة المرور",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900),)
+                        ],
+                      )
+                  ),
+                  FilledButton(
+                      onPressed: (){},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.lock_reset,size: 32,color: Colors.cyan,),
+                          Text("  اداة فحص قوة كلمت المرور",style: TextStyle(fontSize: 18,fontWeight: FontWeight.w900),)
+                        ],
+                      )
+                  ),
+                ],
+              ),
+            ),
+          ),
         ),)
     ;
   }
