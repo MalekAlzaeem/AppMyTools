@@ -7,7 +7,16 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
         textDirection: TextDirection.rtl,
-        child: ,)
+        child: Scaffold(
+          appBar: AppBar(
+            centerTitle: true,
+            backgroundColor: Colors.blueGrey,
+            title: Text("My Tools",style: TextStyle(fontWeight: FontWeight.w900),),
+            actions: [
+              Icon(Icons.home,size: 32,)
+            ],
+          ),
+        ),)
     ;
   }
 }
