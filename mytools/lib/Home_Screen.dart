@@ -32,6 +32,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       )
                   ),
+                  SizedBox(height: 10,),
                   FilledButton(
                       onPressed: (){},
                       child: Row(
@@ -42,6 +43,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       )
                   ),
+                  SizedBox(height: 10,),
                   FilledButton(
                       onPressed: (){},
                       child: Row(
@@ -52,6 +54,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       )
                   ),
+                  SizedBox(height: 10,),
                   FilledButton(
                       onPressed: (){},
                       child: Row(
@@ -62,6 +65,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       )
                   ),
+                  SizedBox(height: 10,),
                   FilledButton(
                       onPressed: (){},
                       child: Row(
