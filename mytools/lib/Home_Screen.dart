@@ -88,6 +88,21 @@ class HomeScreen extends StatelessWidget {
                   child: Text("الشريط الجانبي",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900),),
                   padding: EdgeInsets.all(40),
                 ),
+                ListTile(
+                  leading: Icon(Icons.settings,color: Colors.cyan,size: 32,),
+                  title: Text("الاعدادات  ",style: TextStyle(fontWeight: FontWeight.w900,color: Colors.blueGrey),),
+                  onTap: (){},
+                ),
+                ListTile(
+                  leading: Icon(Icons.support_agent, color: Colors.cyan, size: 32,),
+                  title: Text("المساعدة", style: TextStyle(fontWeight: FontWeight.w900,color: Colors.blueGrey),),
+                  onTap: (){},
+                ),
+                ListTile(
+                  leading: Icon(Icons.info,color: Colors.cyan,size: 32,),
+                  title: Text("حول التطبيق  ",style: TextStyle(fontWeight: FontWeight.w900,color: Colors.blueGrey),),
+                  onTap: (){},
+                ),
               ],
             ),
           ),
