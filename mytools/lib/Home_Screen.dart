@@ -80,6 +80,10 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          drawer: Drawer(
+            width: 220,
+
+          ),
         ),)
     ;
   }
