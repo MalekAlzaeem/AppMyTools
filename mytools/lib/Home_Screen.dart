@@ -84,7 +84,10 @@ class HomeScreen extends StatelessWidget {
             width: 220,
             child: ListView(
               children: [
-                
+                DrawerHeader(
+                  child: Text("الشريط الجانبي",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w900),),
+                  padding: EdgeInsets.all(40),
+                ),
               ],
             ),
           ),
