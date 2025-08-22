@@ -74,7 +74,7 @@ class _PasswordStrengthChecker extends State<PasswordStrength> {
                   style: TextStyle(
                       fontSize: 21,
                       fontWeight: FontWeight.w600,
-                      color: Colors.green
+                      color: Colors.black
                   ),
                 ),
               ),
