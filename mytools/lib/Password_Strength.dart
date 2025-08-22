@@ -58,7 +58,29 @@ class _PasswordStrengthChecker extends State<PasswordStrength> {
             Icon(Icons.lock_reset, size: 32,)
           ],
           backgroundColor: Colors.blueGrey,
-      ),
+        ),
+        body: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xCCC1C1FF)
+                ),
+                child: Text(
+                  "اجعل جميع كلمات المرور وجميع حساباتك وكل ما يحتاج الي كلمة مرور ان يكون أمن مع هذه الاداة تأكد من ان هذه الكلمات قوية",
+                  style: TextStyle(
+                      fontSize: 21,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.green
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
