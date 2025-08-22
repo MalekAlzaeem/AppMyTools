@@ -7,6 +7,12 @@ class PasswordStrength extends StatefulWidget{
 }
 
 class _PasswordStrengthChecker extends State<PasswordStrength> {
+  String _حassword = "";
+  double _سtrength = 0;
+  String _displayText = "ادخل كلمتة المرور";
+  Color _strengthColor = Colors.grey;
+  
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
