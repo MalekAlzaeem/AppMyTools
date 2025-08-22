@@ -2,6 +2,12 @@ import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+  
+  void openPage (BuildContext context, Widget page){
+    Navigator.push(
+        context,MaterialPageRoute(builder: (context) => page));
+  } 
+  
 
   @override
   Widget build(BuildContext context) {
