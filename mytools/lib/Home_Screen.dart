@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10,),
                   FilledButton(
-                      onPressed: (){},
+                      onPressed: () => openPage(context, PasswordStrength()),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
