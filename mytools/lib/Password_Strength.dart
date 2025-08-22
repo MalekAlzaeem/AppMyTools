@@ -48,8 +48,18 @@ class _PasswordStrengthChecker extends State<PasswordStrength> {
 
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text("قوة كلمة المرور",style: TextStyle(fontWeight: FontWeight.w900),),
+          actions: [
+            Icon(Icons.lock_reset, size: 32,)
+          ],
+          backgroundColor: Colors.blueGrey,
+      ),
+      ),
     );
   }
 }
