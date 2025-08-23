@@ -9,7 +9,7 @@ class PasswordStrength extends StatefulWidget {
 class _PasswordStrengthCheckerPageState
     extends State<PasswordStrength> {
   String _password = '';
-  
+
   double _strength = 0;
   String _displayText = 'أدخل كلمة المرور';
   Color _strengthColor = Colors.grey;
@@ -56,64 +56,67 @@ class _PasswordStrengthCheckerPageState
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-            actions: [
-             Icon(Icons.security)
-           ],
-           title: Text('Password Strength'),
-           backgroundColor: Colors.blueGrey,
-          ),
-        body: Padding(
-          padding: const EdgeInsets.only(left: 20,top: 20,right: 20,bottom: 50),
-          child: Column(
-            children: [
-              Container(
-               padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xCCC1C1FF)
-                ),
-                child: Text(
-                  "اجعل جميع كلمات المرور وجميع حساباتك وكل ما يحتاج الي كلمة مرور ان يكون أمن مع هذه الاداة تأكد من ان هذه الكلمات قوية",
-                  style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black
+    return Directionality(
+        textDirection: TextDirection.rtl,
+        child:Scaffold(
+          appBar: AppBar(
+              actions: [
+              Icon(Icons.security)
+            ],
+            title: Text('قوة كلمة المرور'),
+            backgroundColor: Colors.blueGrey,
+            ),
+          body: Padding(
+            padding: const EdgeInsets.only(left: 20,top: 20,right: 20,bottom: 50),
+            child: Column(
+              children: [
+                Container(
+                padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: Color(0xCCC1C1FF)
+                  ),
+                  child: Text(
+                    "اجعل جميع كلمات المرور وجميع حساباتك وكل ما يحتاج الي كلمة مرور ان يكون أمن مع هذه الاداة تأكد من ان هذه الكلمات قوية",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black
+                    ),
                   ),
                 ),
-              ),
-              
-              SizedBox(height: 30,),
-              TextField(
-                onChanged: _checkPasswordStrength,
-                decoration: InputDecoration(
-                  labelText: 'كلمة المرور',
-                  prefixIcon: Icon(Icons.remove_red_eye),
-                  border: OutlineInputBorder(),
+                
+                SizedBox(height: 30,),
+                TextField(
+                  onChanged: _checkPasswordStrength,
+                  decoration: InputDecoration(
+                    labelText: 'كلمة المرور',
+                    prefixIcon: Icon(Icons.remove_red_eye),
+                    border: OutlineInputBorder(),
+                  ),
+                  obscureText: false,
                 ),
-                obscureText: false,
-              ),
-              const SizedBox(height: 20),
-              LinearProgressIndicator(
-                value: _strength,
-                backgroundColor: Colors.grey[300],
-                color: _strengthColor,
-                minHeight: 15,
-              ),
-              const SizedBox(height: 10),
-              Text(
-                _displayText,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w900,
+                const SizedBox(height: 20),
+                LinearProgressIndicator(
+                  value: _strength,
+                  backgroundColor: Colors.grey[300],
                   color: _strengthColor,
+                  minHeight: 15,
                 ),
-              ),
-            ],
+                const SizedBox(height: 10),
+                Text(
+                  _displayText,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    color: _strengthColor,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      // ),
+        // ),
+      )
     );
   }
 }
