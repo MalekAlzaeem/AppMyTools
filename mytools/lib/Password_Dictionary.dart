@@ -102,6 +102,11 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
                   SizedBox(height: 10,),
                   Divider(),
                   SizedBox(height: 10,),
+                  ElevatedButton.icon( 
+                    icon: Icon(Icons.build), 
+                    label: Text('توليد القاموس'), 
+                    onPressed: generatePasswords, ), 
+                  SizedBox(height: 10), 
                 ]
             ),
             ) 
