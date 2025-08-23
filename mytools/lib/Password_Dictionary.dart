@@ -107,6 +107,9 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
                     label: Text('توليد القاموس'), 
                     onPressed: generatePasswords, ), 
                   SizedBox(height: 10), 
+                  if (generatedPasswords.isNotEmpty) ...[
+                     
+                  ]
                 ]
             ),
             ) 
