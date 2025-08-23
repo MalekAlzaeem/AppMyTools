@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mytools/Password_Dictionary.dart';
 import 'Password_Strength.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -52,7 +53,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10,),
                   FilledButton(
-                      onPressed: (){},
+                      onPressed: () => openPage(context, PasswordDictionaryGenerator()),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
