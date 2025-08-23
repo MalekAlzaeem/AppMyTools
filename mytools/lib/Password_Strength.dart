@@ -9,6 +9,7 @@ class PasswordStrength extends StatefulWidget {
 class _PasswordStrengthCheckerPageState
     extends State<PasswordStrength> {
   String _password = '';
+  
   double _strength = 0;
   String _displayText = 'أدخل كلمة المرور';
   Color _strengthColor = Colors.grey;
