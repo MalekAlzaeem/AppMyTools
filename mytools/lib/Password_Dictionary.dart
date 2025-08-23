@@ -71,6 +71,37 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
                     setState(() {
                     passwordLength = int.tryParse(value) ?? 12; }); }, ),
                   SizedBox(height: 20,),
+                  TextField(
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration( 
+                      prefixIcon: Icon(Icons.text_format_rounded),
+                      border: OutlineInputBorder(),
+                      labelText: 'عدد كلمات المرور في القاموس', 
+                      ), 
+                    onChanged: (value) {
+                    setState(() { wordCount = int.tryParse(value) ?? 50; }); }, ), 
+                  SizedBox(height: 10,),
+                  Divider(),
+                  SizedBox(height: 10,),
+                  SwitchListTile(
+                    title: Text('تضمين أحرف صغيرة'), 
+                    value: includeLowercase, 
+                    onChanged: (value) => setState(() => includeLowercase = value), ),
+                  SwitchListTile(
+                    title: Text('تضمين أحرف كبيرة'), 
+                    value: includeUppercase, 
+                    onChanged: (value) => setState(() => includeUppercase = value), ),
+                  SwitchListTile( 
+                    title: Text('تضمين أرقام'), 
+                    value: includeNumbers, 
+                    onChanged: (value) => setState(() => includeNumbers = value), ),
+                  SwitchListTile( 
+                    title: Text('تضمين رموز'), 
+                    value: includeSymbols, 
+                    onChanged: (value) => setState(() => includeSymbols = value), ),
+                  SizedBox(height: 10,),
+                  Divider(),
+                  SizedBox(height: 10,),
                 ]
             ),
             ) 
