@@ -48,15 +48,22 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
   @override Widget build(BuildContext context) {
     return Directionality(
         textDirection: TextDirection.rtl,
-        child:Scaffold( 
-          appBar: AppBar(
-            actions: [
-             Icon(Icons.security)
-           ],
-           title: Text("توليد قاموس كلمات المرور"),
-           backgroundColor: Colors.blueGrey,
-          ),
-      )
+          child:Scaffold( 
+            appBar: AppBar(
+              actions: [
+                Icon(Icons.security)
+              ],
+              title: Text("توليد قاموس كلمات المرور"),
+              backgroundColor: Colors.blueGrey,
+            ),
+            body: Padding(
+              padding: const EdgeInsets.all(15.0), 
+              child: ListView( 
+                children: [
+                ]
+            ),
+            ) 
+          )
     ); 
   } 
 } 
