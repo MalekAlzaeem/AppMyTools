@@ -108,7 +108,11 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
                     onPressed: generatePasswords, ), 
                   SizedBox(height: 10), 
                   if (generatedPasswords.isNotEmpty) ...[
-                     
+                    ElevatedButton.icon( 
+                      icon: Icon(Icons.copy), 
+                      label: Text('نسخ الكل'), 
+                      onPressed: copyToClipboard, ), 
+                    Divider(), 
                   ]
                 ]
             ),
