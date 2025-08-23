@@ -49,6 +49,13 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
     return Directionality(
         textDirection: TextDirection.rtl,
         child:Scaffold( 
+          appBar: AppBar(
+            actions: [
+             Icon(Icons.security)
+           ],
+           title: Text("توليد قاموس كلمات المرور"),
+           backgroundColor: Colors.blueGrey,
+          ),
       )
     ); 
   } 
