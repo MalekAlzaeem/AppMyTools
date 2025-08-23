@@ -40,6 +40,11 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
     setState(() { generatedPasswords = passwords; });
   } 
 
+  Future<void> copyToClipboard() async {
+    final content = generatedPasswords.join('\n'); 
+    await Clipboard.setData(ClipboardData(text: content)); 
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('تم النسخ إلى الحافظة'))); }
+
   @override Widget build(BuildContext context) {
     return Scaffold( 
 
