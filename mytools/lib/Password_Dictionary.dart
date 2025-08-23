@@ -113,6 +113,16 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
                       label: Text('نسخ الكل'), 
                       onPressed: copyToClipboard, ), 
                     Divider(), 
+                    Text('النتائج:', style: TextStyle(fontWeight: FontWeight.bold)), 
+                    Container( height: 150,
+                      child: ListView.builder(
+                        itemCount: generatedPasswords.length,
+                        itemBuilder: (context, index) => ListTile( 
+                        dense: true, 
+                        title: Text(generatedPasswords[index]), 
+                        ), 
+                      ), 
+                    ), 
                   ]
                 ]
             ),
