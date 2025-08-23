@@ -60,6 +60,17 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
               padding: const EdgeInsets.all(15.0), 
               child: ListView( 
                 children: [
+                  TextField( 
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Icons.numbers),
+                      border: OutlineInputBorder(),
+                      labelText: 'عدد الأحرف في كل كلمة مرور', 
+                    ),
+                    onChanged: (value) {
+                    setState(() {
+                    passwordLength = int.tryParse(value) ?? 12; }); }, ),
+                  SizedBox(height: 20,),
                 ]
             ),
             ) 
