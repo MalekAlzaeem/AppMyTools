@@ -46,8 +46,10 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('تم النسخ إلى الحافظة'))); }
 
   @override Widget build(BuildContext context) {
-    return Scaffold( 
-
+    return Directionality(
+        textDirection: TextDirection.rtl,
+        child:Scaffold( 
+      )
     ); 
   } 
 } 
