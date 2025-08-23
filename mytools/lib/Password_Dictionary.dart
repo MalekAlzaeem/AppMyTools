@@ -18,6 +18,28 @@ class _PasswordDictionaryGeneratorState extends State<PasswordDictionaryGenerato
   bool includeSymbols = true;
   List<String> generatedPasswords = [];
 
+  String get _allowedChars {
+    String chars = '';
+    if (includeLowercase) chars += 'abcdefghijklmnopqrstuvwxyz'; 
+    if (includeUppercase) chars += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    if (includeNumbers) chars += '0123456789';
+    if (includeSymbols) chars += '!@#\$%^&*()_+-=[]{}|;:,.<>?';
+    return chars;
+  }
+
+  void generatePasswords() {
+    final random = Random.secure();
+    List<String> passwords = []; 
+    for (int i = 0; i < wordCount; i++) { 
+      String pwd = '';
+      for (int j = 0; j < passwordLength; j++) { 
+        pwd += _allowedChars[random.nextInt(_allowedChars.length)];
+     }   
+      passwords.add(pwd); 
+    } 
+    setState(() { generatedPasswords = passwords; });
+  } 
+
   @override Widget build(BuildContext context) {
     return Scaffold( 
 
