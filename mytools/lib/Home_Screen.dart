@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mytools/Password_Dictionary.dart';
 import 'Password_Strength.dart';
+import 'Image_Analyzer.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -42,7 +43,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10,),
                   FilledButton(
-                      onPressed: (){},
+                      onPressed: () => openPage(context, ImageAnalyzer()),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
