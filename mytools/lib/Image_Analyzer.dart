@@ -101,6 +101,20 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                       },
                       child: Text("عرض الموقع"),
                     ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        final data = _getSpecificData("Image Make");
+                        showDialog(
+                          context: context,
+                          builder: (_) => AlertDialog(
+                            title: Text("الجهاز"),
+                            content: Text(data),
+                          ),
+                        );
+                      },
+                      child: Text("عرض جهاز الالتقاط"),
+                    ),
                   ]
                 ]
               ),
