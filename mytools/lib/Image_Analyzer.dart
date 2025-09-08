@@ -65,6 +65,11 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
             child: Center(
               child: Column(
                 children: [
+                  ElevatedButton(
+                    onPressed: _pickImage,
+                    child: Text("أختر الصورة",
+                    ),
+                  ),
                 ]
               ),
             ),
