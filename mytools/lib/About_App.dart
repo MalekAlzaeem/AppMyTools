@@ -59,6 +59,22 @@ class AboutApp extends StatelessWidget {
                 subtitle: Text("v1.0.0"),
               ),
               Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.info_outline,
+                  size: 32, 
+                  color: Colors.cyan
+                ),
+                title: Text(
+                  "الوصف",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                subtitle: Text("توفر مجموعة الادوات هذه ميزات قوية بما في ذلك فحص قوة كلمة المرور وانشاء كلمة المرور والقواميس وتحليل الصور والتشفير انها ادوات لتعزيز الامن الرقمي الخاص بك."),
+              ),
+              Divider(),
             ],
           ),
         ),  
