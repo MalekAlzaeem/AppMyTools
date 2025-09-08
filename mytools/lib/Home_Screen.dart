@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:mytools/About_App.dart';
 import 'package:mytools/Password_Dictionary.dart';
 import 'Password_Strength.dart';
 import 'Image_Analyzer.dart';
+import 'About_App.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -110,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                 ListTile(
                   leading: Icon(Icons.info,color: Colors.cyan,size: 32,),
                   title: Text("حول التطبيق  ",style: TextStyle(fontWeight: FontWeight.w900,color: Colors.blueGrey),),
-                  onTap: (){},
+                  onTap: () => openPage(context, AboutApp()),
                 ),
               ],
             ),
