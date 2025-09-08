@@ -91,6 +91,23 @@ class AboutApp extends StatelessWidget {
                 subtitle: Text("مالك عبدالملك الزعيم"),
               ),
               Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.email,
+                  size: 32, 
+                  color: Colors.cyan,
+                ),
+                title: Text(
+                  "البريد الالكتروني",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                subtitle: Text("malekalzaeem@gmail.com"),
+              ),
+              SizedBox(height: 40,),
+              Divider(),
             ],
           ),
         ),  
