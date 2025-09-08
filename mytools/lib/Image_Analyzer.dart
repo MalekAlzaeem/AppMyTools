@@ -57,6 +57,10 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
       child: Scaffold(
         appBar: AppBar(
             title: Text("تحليل الصور",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w700
+              ),
             )
         ),
         body: Container(
