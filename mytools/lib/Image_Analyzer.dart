@@ -159,13 +159,16 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("Image DateTime");
                         showDialog(
                           context: context,
                           builder: (_) => AlertDialog(
                             title: Text("تاريخ الالتقاط"),
-                            content: Text(data),
+                            content: Text(data, style: TextStyle(fontSize: 20),),
                           ),
                         );
                       },
