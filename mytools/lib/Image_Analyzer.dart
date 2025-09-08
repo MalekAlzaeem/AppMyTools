@@ -129,6 +129,20 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                       },
                       child: Text("عرض طراز الكاميرا"),
                     ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        final data = _getSpecificData("Image DateTime");
+                        showDialog(
+                          context: context,
+                          builder: (_) => AlertDialog(
+                            title: Text("تاريخ الالتقاط"),
+                            content: Text(data),
+                          ),
+                        );
+                      },
+                      child: Text("عرض التاريخ"),
+                    ),
                   ]
                 ]
               ),
