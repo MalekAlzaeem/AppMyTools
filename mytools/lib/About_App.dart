@@ -21,6 +21,14 @@ class AboutApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blueGrey,
         ),
+        body: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: ListView(
+            children: [
+
+            ],
+          ),
+        ),  
       ),
     );
   }
