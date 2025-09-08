@@ -101,6 +101,9 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                   if (_exifData != null && _exifData!.isNotEmpty) ...[
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("GPS GPSLatitude");
                         final data2 = _getSpecificData("GPS GPSLongitude");
@@ -111,8 +114,8 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                             content: Column(
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
-                                  Text(data2),
-                                  Text(data),
+                                  Text(data2, style: TextStyle(fontSize: 20),),
+                                  Text(data, style: TextStyle(fontSize: 20),),
                                 ]
                             ),
                           ),
