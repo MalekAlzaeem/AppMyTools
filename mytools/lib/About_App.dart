@@ -43,6 +43,22 @@ class AboutApp extends StatelessWidget {
                 ),
               ),
               Divider(),
+              ListTile(
+                leading: Icon(
+                  Icons.verified,
+                  size: 32, 
+                  color: Colors.cyan
+                ),
+                title: Text(
+                  "الاصدار",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                subtitle: Text("v1.0.0"),
+              ),
+              Divider(),
             ],
           ),
         ),  
