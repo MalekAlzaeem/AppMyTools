@@ -70,6 +70,14 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     child: Text("أختر الصورة",
                     ),
                   ),
+                  SizedBox(height: 10),
+                  if (_image != null) Image.file(_image!),
+                  SizedBox(height: 20),
+                  ElevatedButton(
+                    onPressed: _analyzeImage,
+                    child: Text("تحليل الصورة",
+                    ),
+                  ),
                 ]
               ),
             ),
