@@ -37,12 +37,13 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
 
   void _copyAllData() {
     if (_exifData == null) return;
-    final allData = _exifData!.entries.map((e) => "${e.key}: ${e.value}").join(
-        "\n");
+    final allData = _exifData!.entries
+        .map((e) => "${e.key}: ${e.value}")
+        .join("\n");
     Clipboard.setData(ClipboardData(text: allData));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(content: Text("تم نسخ كل البيانات!")),
-    );
+    ScaffoldMessenger.of(
+      context,
+    ).showSnackBar(const SnackBar(content: Text("تم نسخ كل البيانات!")));
   }
 
   String _getSpecificData(String key) {
@@ -55,28 +56,23 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(
-            title: Text("تحليل الصور",
-            )
-        ),
+        appBar: AppBar(title: Text("تحليل الصور")),
         body: Container(
-          child:  SingleChildScrollView(
+          child: SingleChildScrollView(
             padding: EdgeInsets.all(16),
             child: Center(
               child: Column(
                 children: [
                   ElevatedButton(
                     onPressed: _pickImage,
-                    child: Text("أختر الصورة",
-                    ),
+                    child: Text("أختر الصورة"),
                   ),
                   SizedBox(height: 10),
                   if (_image != null) Image.file(_image!),
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: _analyzeImage,
-                    child: Text("تحليل الصورة",
-                    ),
+                    child: Text("تحليل الصورة"),
                   ),
                   SizedBox(height: 20),
                   if (_exifData != null && _exifData!.isNotEmpty) ...[
@@ -87,16 +83,14 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                         final data2 = _getSpecificData("GPS GPSLongitude");
                         showDialog(
                           context: context,
-                          builder: (_) => AlertDialog(
-                            title: Text("الموقع"),
-                            content: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  Text(data2),
-                                  Text(data),
-                                ]
-                            ),
-                          ),
+                          builder:
+                              (_) => AlertDialog(
+                                title: Text("الموقع"),
+                                content: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [Text(data2), Text(data)],
+                                ),
+                              ),
                         );
                       },
                       child: Text("عرض الموقع"),
@@ -107,10 +101,11 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                         final data = _getSpecificData("Image Make");
                         showDialog(
                           context: context,
-                          builder: (_) => AlertDialog(
-                            title: Text("الجهاز"),
-                            content: Text(data),
-                          ),
+                          builder:
+                              (_) => AlertDialog(
+                                title: Text("الجهاز"),
+                                content: Text(data),
+                              ),
                         );
                       },
                       child: Text("عرض جهاز الالتقاط"),
@@ -121,10 +116,11 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                         final data = _getSpecificData("Image Model");
                         showDialog(
                           context: context,
-                          builder: (_) => AlertDialog(
-                            title: Text("طراز الكاميرا"),
-                            content: Text(data),
-                          ),
+                          builder:
+                              (_) => AlertDialog(
+                                title: Text("طراز الكاميرا"),
+                                content: Text(data),
+                              ),
                         );
                       },
                       child: Text("عرض طراز الكاميرا"),
@@ -135,23 +131,25 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                         final data = _getSpecificData("Image DateTime");
                         showDialog(
                           context: context,
-                          builder: (_) => AlertDialog(
-                            title: Text("تاريخ الالتقاط"),
-                            content: Text(data),
-                          ),
+                          builder:
+                              (_) => AlertDialog(
+                                title: Text("تاريخ الالتقاط"),
+                                content: Text(data),
+                              ),
                         );
                       },
                       child: Text("عرض التاريخ"),
                     ),
                     SizedBox(height: 20),
-                    Text("جميع المعلومات المستخرجة:",
-                    ),
+                    Text("جميع المعلومات المستخرجة:"),
                     SizedBox(height: 10),
                     Container(
                       padding: EdgeInsets.all(10),
                       child: Text(
                         textDirection: TextDirection.ltr,
-                        _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n"),
+                        _exifData!.entries
+                            .map((e) => "${e.key}: ${e.value}")
+                            .join("\n"),
                       ),
                     ),
                     SizedBox(height: 10),
@@ -159,8 +157,8 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                       onPressed: _copyAllData,
                       child: Text("نسخ كل المعلومات"),
                     ),
-                  ]
-                ]
+                  ],
+                ],
               ),
             ),
           ),
