@@ -78,6 +78,30 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     child: Text("تحليل الصورة",
                     ),
                   ),
+                  SizedBox(height: 20),
+                  if (_exifData != null && _exifData!.isNotEmpty) ...[
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: () {
+                        final data = _getSpecificData("GPS GPSLatitude");
+                        final data2 = _getSpecificData("GPS GPSLongitude");
+                        showDialog(
+                          context: context,
+                          builder: (_) => AlertDialog(
+                            title: Text("الموقع"),
+                            content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(data2),
+                                  Text(data),
+                                ]
+                            ),
+                          ),
+                        );
+                      },
+                      child: Text("عرض الموقع"),
+                    ),
+                  ]
                 ]
               ),
             ),
