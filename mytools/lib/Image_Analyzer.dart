@@ -37,7 +37,8 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
 
   void _copyAllData() {
     if (_exifData == null) return;
-    final allData = _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n");
+    final allData = _exifData!.entries.map((e) => "${e.key}: ${e.value}").join(
+        "\n");
     Clipboard.setData(ClipboardData(text: allData));
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text("تم نسخ كل البيانات!")),
@@ -49,4 +50,16 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
     return _exifData![key]?.toString() ?? "Not available";
   }
 
-  
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        appBar: AppBar(
+            title: Text("تحليل الصور",
+            )
+        ),
+      ),
+    );
+  }
+}
