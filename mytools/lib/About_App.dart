@@ -25,7 +25,24 @@ class AboutApp extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           child: ListView(
             children: [
-
+              ListTile(
+                leading: Icon(
+                  Icons.apps,
+                  size: 32, 
+                  color: Colors.cyan
+                ),
+                title: Text(
+                  "اسم التطبيق",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    color: Colors.blueGrey,
+                  ),
+                ),
+                subtitle: Text(
+                  "Cyber Tools",
+                ),
+              ),
+              Divider(),
             ],
           ),
         ),  
