@@ -3,7 +3,6 @@ import 'package:mytools/About_App.dart';
 import 'package:mytools/Password_Dictionary.dart';
 import 'Password_Strength.dart';
 import 'Image_Analyzer.dart';
-import 'About_App.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
