@@ -143,6 +143,9 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                       },
                       child: Text("عرض التاريخ"),
                     ),
+                    SizedBox(height: 20),
+                    Text("جميع المعلومات المستخرجة:",
+                    ),
                   ]
                 ]
               ),
