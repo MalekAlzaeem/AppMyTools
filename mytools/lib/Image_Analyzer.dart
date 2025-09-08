@@ -88,6 +88,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                   SizedBox(height: 20),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
                       minimumSize: Size(300, 60),
                     ),
                     onPressed: _analyzeImage,
@@ -103,6 +104,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 10),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                         minimumSize: Size(250, 50),
                       ),
                       onPressed: () {
@@ -127,6 +129,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 10),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                         minimumSize: Size(250, 50),
                       ),
                       onPressed: () {
@@ -144,6 +147,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 10),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                         minimumSize: Size(250, 50),
                       ),
                       onPressed: () {
@@ -161,6 +165,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 10),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                         minimumSize: Size(250, 50),
                       ),
                       onPressed: () {
@@ -197,6 +202,7 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 10),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
                         minimumSize: Size(250, 50),
                       ),
                       onPressed: _copyAllData,
