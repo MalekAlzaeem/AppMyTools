@@ -176,6 +176,9 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     ),
                     SizedBox(height: 20),
                     Text("جميع المعلومات المستخرجة:",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900
+                      ),
                     ),
                     SizedBox(height: 10),
                     Container(
