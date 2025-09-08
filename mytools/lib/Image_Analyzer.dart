@@ -154,6 +154,11 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                         _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n"),
                       ),
                     ),
+                    SizedBox(height: 10),
+                    ElevatedButton(
+                      onPressed: _copyAllData,
+                      child: Text("نسخ كل المعلومات"),
+                    ),
                   ]
                 ]
               ),
