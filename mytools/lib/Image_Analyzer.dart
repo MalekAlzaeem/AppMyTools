@@ -59,6 +59,17 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
             title: Text("تحليل الصور",
             )
         ),
+        body: Container(
+          child:  SingleChildScrollView(
+            padding: EdgeInsets.all(16),
+            child: Center(
+              child: Column(
+                children: [
+                ]
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
