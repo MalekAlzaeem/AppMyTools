@@ -86,8 +86,15 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                   if (_image != null) Image.file(_image!),
                   SizedBox(height: 20),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(300, 60),
+                    ),
                     onPressed: _analyzeImage,
                     child: Text("تحليل الصورة",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800
+                      ),
                     ),
                   ),
                   SizedBox(height: 20),
