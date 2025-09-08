@@ -108,6 +108,15 @@ class AboutApp extends StatelessWidget {
               ),
               SizedBox(height: 40,),
               Divider(),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  "مالك الزعيم جميع الحقوق محفوظة 2025 @",
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ),
             ],
           ),
         ),  
