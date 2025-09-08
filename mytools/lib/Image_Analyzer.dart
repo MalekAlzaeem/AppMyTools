@@ -182,10 +182,15 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     ),
                     SizedBox(height: 10),
                     Container(
+                      decoration:BoxDecoration(
+                          color: Colors.grey.shade300,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                       padding: EdgeInsets.all(10),
                       child: Text(
                         textDirection: TextDirection.ltr,
                         _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n"),
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                     SizedBox(height: 10),
