@@ -6,6 +6,21 @@ class AboutApp extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: AppBar(
+          actions: [
+            Icon(
+              Icons.info, 
+              size: 30,
+            ),
+          ],
+          title: Text(
+            "حول التطبيق",
+            style: TextStyle(
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+          backgroundColor: Colors.blueGrey,
+        ),
       ),
     );
   }
