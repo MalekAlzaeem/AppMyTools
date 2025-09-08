@@ -146,6 +146,14 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     SizedBox(height: 20),
                     Text("جميع المعلومات المستخرجة:",
                     ),
+                    SizedBox(height: 10),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Text(
+                        textDirection: TextDirection.ltr,
+                        _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n"),
+                      ),
+                    ),
                   ]
                 ]
               ),
