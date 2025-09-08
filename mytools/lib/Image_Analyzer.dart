@@ -56,7 +56,14 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(title: Text("تحليل الصور")),
+        appBar: AppBar(
+            title: Text("تحليل الصور",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.w700
+              ),
+            )
+        ),
         body: Container(
           child: SingleChildScrollView(
             padding: EdgeInsets.all(16),
@@ -64,96 +71,134 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
               child: Column(
                 children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blueGrey,
+                      minimumSize: Size(300, 60),
+                    ),
                     onPressed: _pickImage,
-                    child: Text("أختر الصورة"),
+                    child: Text("أختر الصورة",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
                   ),
                   SizedBox(height: 10),
                   if (_image != null) Image.file(_image!),
                   SizedBox(height: 20),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: Size(300, 60),
+                    ),
                     onPressed: _analyzeImage,
-                    child: Text("تحليل الصورة"),
+                    child: Text("تحليل الصورة",
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w800
+                      ),
+                    ),
                   ),
                   SizedBox(height: 20),
                   if (_exifData != null && _exifData!.isNotEmpty) ...[
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("GPS GPSLatitude");
                         final data2 = _getSpecificData("GPS GPSLongitude");
                         showDialog(
                           context: context,
-                          builder:
-                              (_) => AlertDialog(
-                                title: Text("الموقع"),
-                                content: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [Text(data2), Text(data)],
-                                ),
-                              ),
+                          builder: (_) => AlertDialog(
+                            title: Text("الموقع"),
+                            content: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(data2, style: TextStyle(fontSize: 20),),
+                                  Text(data, style: TextStyle(fontSize: 20),),
+                                ]
+                            ),
+                          ),
                         );
                       },
                       child: Text("عرض الموقع"),
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("Image Make");
                         showDialog(
                           context: context,
-                          builder:
-                              (_) => AlertDialog(
-                                title: Text("الجهاز"),
-                                content: Text(data),
-                              ),
+                          builder: (_) => AlertDialog(
+                            title: Text("الجهاز"),
+                            content: Text(data, style: TextStyle(fontSize: 20),),
+                          ),
                         );
                       },
                       child: Text("عرض جهاز الالتقاط"),
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("Image Model");
                         showDialog(
                           context: context,
-                          builder:
-                              (_) => AlertDialog(
-                                title: Text("طراز الكاميرا"),
-                                content: Text(data),
-                              ),
+                          builder: (_) => AlertDialog(
+                            title: Text("طراز الكاميرا"),
+                            content: Text(data, style: TextStyle(fontSize: 20),),
+                          ),
                         );
                       },
                       child: Text("عرض طراز الكاميرا"),
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: () {
                         final data = _getSpecificData("Image DateTime");
                         showDialog(
                           context: context,
-                          builder:
-                              (_) => AlertDialog(
-                                title: Text("تاريخ الالتقاط"),
-                                content: Text(data),
-                              ),
+                          builder: (_) => AlertDialog(
+                            title: Text("تاريخ الالتقاط"),
+                            content: Text(data, style: TextStyle(fontSize: 20),),
+                          ),
                         );
                       },
                       child: Text("عرض التاريخ"),
                     ),
                     SizedBox(height: 20),
-                    Text("جميع المعلومات المستخرجة:"),
+                    Text("جميع المعلومات المستخرجة:",
+                      style: TextStyle(
+                          fontWeight: FontWeight.w900
+                      ),
+                    ),
                     SizedBox(height: 10),
                     Container(
+                      decoration:BoxDecoration(
+                          color: Colors.grey.shade300,
+                          borderRadius: BorderRadius.circular(15)
+                      ),
                       padding: EdgeInsets.all(10),
                       child: Text(
                         textDirection: TextDirection.ltr,
-                        _exifData!.entries
-                            .map((e) => "${e.key}: ${e.value}")
-                            .join("\n"),
+                        _exifData!.entries.map((e) => "${e.key}: ${e.value}").join("\n"),
+                        style: TextStyle(fontSize: 10),
                       ),
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: _copyAllData,
                       child: Text("نسخ كل المعلومات"),
                     ),
