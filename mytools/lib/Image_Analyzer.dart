@@ -70,8 +70,16 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
               child: Column(
                 children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(        ////
+                      backgroundColor: Colors.blueGrey,
+                      minimumSize: Size(300, 60),////////
+                    ),
                     onPressed: _pickImage,
                     child: Text("أختر الصورة",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w800,
+                      ),
                     ),
                   ),
                   SizedBox(height: 10),
