@@ -195,6 +195,9 @@ class _ImageAnalyzerState extends State<ImageAnalyzer> {
                     ),
                     SizedBox(height: 10),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        minimumSize: Size(250, 50),
+                      ),
                       onPressed: _copyAllData,
                       child: Text("نسخ كل المعلومات"),
                     ),
