@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Setting extends StatelessWidget {
-   
+bool t = false;
   @override
   Widget build(BuildContext context) {
     return Directionality(
