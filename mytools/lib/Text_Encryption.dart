@@ -46,7 +46,20 @@ class Screen7 extends StatelessWidget{
                 ),
                   ),
                 ),
-                
+                Expanded(
+                flex: 3,
+                child: Container(
+                width: 250,
+                child: TextFormField(
+                decoration: InputDecoration(
+                    hintText: " أدخل اسم الملف",
+                    labelText: "أسم الملف",
+                    prefixIcon: Icon(Icons.file_open_rounded),
+                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(15))
+                ),
+                ),
+                ),
+                ),
                 ],
               ),
             ]
