@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-class Screen8 extends StatelessWidget {
+class StrongPassword extends StatelessWidget {
 bool t = false;
   @override
   Widget build(BuildContext context) {
