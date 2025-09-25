@@ -98,6 +98,23 @@ class HelpPage extends StatelessWidget {
                 "يمكنك تشفير وفك تشفير ملفاتك لحماية معلوماتك الحساسة.",
               ),
             ),
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.image_search,size: 32, 
+                color: Colors.cyan,
+              ),
+              title: Text(
+                "  اداة تحليل الصور",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              subtitle: Text(
+                "تتيح لك هذه الاداة تحديد وتحليل الصور لاكتشاف جميع المعلومات حولها.",
+              ),
+            ),
         ],
         ),
     ),
