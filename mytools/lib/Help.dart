@@ -23,6 +23,12 @@ class HelpPage extends StatelessWidget {
         ),
          backgroundColor: Colors.blueGrey,
       ),
+      body: ListView(
+          padding:  EdgeInsets.all(16),
+          children: [
+            Divider(),
+        ],
+        ),
     ),
     );
   }
