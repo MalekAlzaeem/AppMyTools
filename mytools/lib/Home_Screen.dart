@@ -6,6 +6,7 @@ import 'package:mytools/Setting.dart';
 import 'Password_Strength.dart';
 import 'Image_Analyzer.dart';
 import 'Text_Encryption.dart';
+import 'Strong_Password.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -69,7 +70,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 10,),
                   FilledButton(
-                      onPressed: (){},
+                      onPressed: () => openPage(context, StrongPassword()),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
