@@ -5,6 +5,22 @@ class HelpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          Icon(
+            Icons.support_agent, 
+            size: 32,
+          ),
+        ],
+        title: Text(
+          "المساعدة",
+          style: TextStyle(
+            fontWeight: FontWeight.w900,
+          ),
+        ),
+         backgroundColor: Colors.blueGrey,
+      ),
+    );
   }
 }
