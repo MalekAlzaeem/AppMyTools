@@ -21,6 +21,21 @@ class Setting extends StatelessWidget {
       ),
       body: Column(
         children: [
+           Divider(),
+          SizedBox(height: 20,),
+          Row(
+            children: [
+              SizedBox(width: 10,),
+          Text("اللغة",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),
+            ],
+          ),
+          SizedBox(height: 10,),
+          SwitchListTile(
+            title: Text('أ / A',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),  
+            value: t, 
+            onChanged: null,
+          ),
+           Divider(),
         ],
       ),
         ),
