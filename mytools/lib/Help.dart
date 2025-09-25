@@ -27,6 +27,23 @@ class HelpPage extends StatelessWidget {
           padding:  EdgeInsets.all(16),
           children: [
             Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.library_books,
+                size: 32, 
+                color: Colors.cyan,
+              ),
+              title: Text(
+                "  اداة توليد القواميس",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              subtitle: Text(
+                "تساعد هذه الاداة في انشاء قائمة كلمات مخصصة لمحاكاة تكسير كلمات المرور او الامان.",
+              ),
+            ),
         ],
         ),
     ),
