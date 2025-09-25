@@ -5,7 +5,15 @@ bool t = false;
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: Scaffold(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("كلمة مرور قوية",style: TextStyle(fontSize: 25),
+          ),
+          centerTitle: true,
+          leading: Icon(Icons.password_rounded),
+          backgroundColor: Colors.blueGrey,
+        ),
+      ),
     );
   }
 }
