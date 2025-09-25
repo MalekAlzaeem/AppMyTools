@@ -5,7 +5,9 @@ class HelpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Directionality(
+      textDirection: TextDirection.rtl,
+      child:  Scaffold(
       appBar: AppBar(
         actions: [
           Icon(
@@ -21,6 +23,7 @@ class HelpPage extends StatelessWidget {
         ),
          backgroundColor: Colors.blueGrey,
       ),
+    ),
     );
   }
 }
