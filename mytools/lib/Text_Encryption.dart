@@ -13,6 +13,12 @@ class Screen7 extends StatelessWidget{
           leading: Icon(Icons.no_encryption),
           backgroundColor: Colors.blueGrey,
         ),
+         body: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Column(
+            children: []
+          ),
+         ),
       ),
     );
   }
