@@ -5,6 +5,7 @@ import 'package:mytools/Password_Dictionary.dart';
 import 'package:mytools/Setting.dart';
 import 'Password_Strength.dart';
 import 'Image_Analyzer.dart';
+import 'Text_Encryption.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   FilledButton(
-                      onPressed: (){},
+                      onPressed: () => openPage(context, TextEncryption()),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
