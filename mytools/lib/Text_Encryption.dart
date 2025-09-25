@@ -16,7 +16,17 @@ class Screen7 extends StatelessWidget{
          body: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
-            children: []
+            children: [
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                spacing: 20,
+                children: [
+                  
+                ],
+              ),
+            ]
           ),
          ),
       ),
