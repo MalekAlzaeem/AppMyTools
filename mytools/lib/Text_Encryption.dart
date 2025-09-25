@@ -120,6 +120,28 @@ class Screen7 extends StatelessWidget{
                  
                 ),
               ),
+              SizedBox(height: 30,),
+              SizedBox(
+             width: 300,
+             height: 70,
+                child: MaterialButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.red,
+                  splashColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "حفظ الملف",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                  ),
             ]
           ),
          ),
