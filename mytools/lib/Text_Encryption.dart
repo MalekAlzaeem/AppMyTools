@@ -62,6 +62,57 @@ class Screen7 extends StatelessWidget{
                 ),
                 ],
               ),
+              SizedBox(
+                height: 50,
+              ),
+              Row(
+                spacing: 20,
+                children: [
+                  Expanded(child: SizedBox(
+              height: 70,
+                child: MaterialButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.red,
+                  splashColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "تشفير",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+
+                  ),
+                  Expanded(child:SizedBox(
+             height: 70,
+                child: MaterialButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.red,
+                  splashColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "فك تشفير",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                  ),
+              ),
+                ],
+              ),
             ]
           ),
          ),
