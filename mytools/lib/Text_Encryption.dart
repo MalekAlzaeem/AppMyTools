@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Screen7 extends StatelessWidget{
+class TextEncryption extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return Directionality(
