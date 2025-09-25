@@ -19,6 +19,10 @@ class Setting extends StatelessWidget {
         ),
          backgroundColor: Colors.blueGrey,
       ),
+      body: Column(
+        children: [
+        ],
+      ),
         ),
     );
   }
