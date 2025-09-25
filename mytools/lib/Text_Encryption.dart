@@ -23,7 +23,30 @@ class Screen7 extends StatelessWidget{
               Row(
                 spacing: 20,
                 children: [
-                  
+                  Expanded(
+                    flex: 1,
+                    child:SizedBox(
+                    width: 100,
+                    child: MaterialButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.red,
+                  splashColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "أختيار",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                  ),
+                ),
+                
                 ],
               ),
             ]
