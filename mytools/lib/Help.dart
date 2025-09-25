@@ -44,6 +44,24 @@ class HelpPage extends StatelessWidget {
                 "تساعد هذه الاداة في انشاء قائمة كلمات مخصصة لمحاكاة تكسير كلمات المرور او الامان.",
               ),
             ),
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.security,
+                size: 32, 
+                color: Colors.cyan,
+              ),
+              title: Text(
+                "  اداة توليد كلمة المرور",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              subtitle: Text(
+                "تنشئ هذه الاداة كلمة مرور قوية وأمنة بناء على تفضيلاتك.",
+              ),
+            ),
         ],
         ),
     ),
