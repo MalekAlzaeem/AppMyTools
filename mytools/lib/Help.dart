@@ -62,6 +62,24 @@ class HelpPage extends StatelessWidget {
                 "تنشئ هذه الاداة كلمة مرور قوية وأمنة بناء على تفضيلاتك.",
               ),
             ),
+            Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.lock_reset_rounded,
+                size: 32, 
+                color: Colors.cyan,
+              ),
+              title: Text(
+                "  اداة فحص قوة كلمت المرور",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              subtitle: Text(
+                "تقيم هذه الاداة مدى قوة او ضعف كامة المرور المعينة باستخدام معايير الامان.",
+              ),
+            ),
         ],
         ),
     ),
