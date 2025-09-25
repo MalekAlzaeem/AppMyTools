@@ -17,6 +17,15 @@ bool t = false;
           padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
+              SizedBox(
+                height: 20,
+              ),
+              TextFormField(
+
+                decoration: InputDecoration(
+                  
+                ),
+              ),
             ]
           ),
         ),
