@@ -80,6 +80,24 @@ class HelpPage extends StatelessWidget {
                 "تقيم هذه الاداة مدى قوة او ضعف كامة المرور المعينة باستخدام معايير الامان.",
               ),
             ),
+             Divider(),
+            ListTile(
+              leading: Icon(
+                Icons.no_encryption_gmailerrorred_outlined,
+                size: 32, 
+                color: Colors.cyan,
+              ),
+              title: Text(
+                "  اداة تشفير النص",
+                style: TextStyle(
+                  fontWeight: FontWeight.w900,
+                  color: Colors.blueGrey,
+                ),
+              ),
+              subtitle: Text(
+                "يمكنك تشفير وفك تشفير ملفاتك لحماية معلوماتك الحساسة.",
+              ),
+            ),
         ],
         ),
     ),
