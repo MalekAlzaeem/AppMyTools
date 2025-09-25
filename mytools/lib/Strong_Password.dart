@@ -51,6 +51,29 @@ bool t = false;
             value: t, 
             onChanged: null,
           ),
+           Divider(),
+           SizedBox(height: 20,),
+           SizedBox(
+                    width: 250,
+                    height: 70,
+                    child: MaterialButton(
+                  color: Colors.blue,
+                  highlightColor: Colors.red,
+                  splashColor: Colors.black,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  onPressed: () {},
+                  child: Text(
+                    "كلمة جديدة",
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                  ),
             ]
           ),
         ),
