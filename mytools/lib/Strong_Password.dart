@@ -26,6 +26,13 @@ bool t = false;
                   
                 ),
               ),
+              SizedBox(height: 30,),
+              Divider(),
+          SwitchListTile(
+            title: Text('تضمين أحرف صغيرة',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),  
+            value: t, 
+            onChanged: null,
+          ),
             ]
           ),
         ),
