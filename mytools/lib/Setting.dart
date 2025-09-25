@@ -36,6 +36,20 @@ class Setting extends StatelessWidget {
             onChanged: null,
           ),
            Divider(),
+           SizedBox(height: 20,),
+          Row(
+            children: [
+              SizedBox(width: 10,),
+          Text("اللون",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),
+            ],
+          ),
+          SizedBox(height: 10,),
+          SwitchListTile(
+            title: Text('عادي / داكن',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),  
+            value: t, 
+            onChanged: null,
+          ),
+           Divider(),
         ],
       ),
         ),
