@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mytools/About_App.dart';
 import 'package:mytools/Help.dart';
 import 'package:mytools/Password_Dictionary.dart';
+import 'package:mytools/Setting.dart';
 import 'Password_Strength.dart';
 import 'Image_Analyzer.dart';
 
