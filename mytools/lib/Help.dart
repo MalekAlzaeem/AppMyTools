@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-class HelpPage extends StatelessWidget {
+class Help extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
