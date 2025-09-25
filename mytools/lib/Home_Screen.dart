@@ -102,7 +102,7 @@ class HomeScreen extends StatelessWidget {
                 ListTile(
                   leading: Icon(Icons.settings,color: Colors.cyan,size: 32,),
                   title: Text("الاعدادات  ",style: TextStyle(fontWeight: FontWeight.w900,color: Colors.blueGrey),),
-                  onTap: (){},
+                  onTap: () => openPage(context, Setting()),
                 ),
                 ListTile(
                   leading: Icon(Icons.support_agent, color: Colors.cyan, size: 32,),
