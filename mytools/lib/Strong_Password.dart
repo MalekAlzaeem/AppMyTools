@@ -33,6 +33,12 @@ bool t = false;
             value: t, 
             onChanged: null,
           ),
+          Divider(),
+           SwitchListTile(
+            title: Text('تضمين أحرف كبيرة',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w700,),),  
+            value: t, 
+            onChanged: null,
+          ),
             ]
           ),
         ),
